@@ -1,5 +1,9 @@
+#BEGIN WordPress
+
 RewriteEngine on
 RewriteCond %{HTTP:Authorization} ^(.*)
 RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]
 
 SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+
+# END WordPress
